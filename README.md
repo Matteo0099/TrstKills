@@ -1,3 +1,13 @@
+# TrstKills website by @Matteo0099
+
+
+# deployed by 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d6c786b2-55a2-4227-9f71-14ca3ed41166/deploy-status)](https://app.netlify.com/sites/trstkills/deploys)
+
+
+
+
+
 # Astro Starter Kit: Basics
 
 ```
