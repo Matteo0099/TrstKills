@@ -1,6 +1,7 @@
 ---
 // import some stuff
 import '../styles/main.css'
+import '../styles/reset.css'
 import headed from '../components/Head.astro'
 
 interface Props {
@@ -11,8 +12,11 @@ interface Props {
 
 <!DOCTYPE html>
 <html lang="en">
+	<!-- head of the docs -->
 	<headed />
 	<body>
+		<!-- content ↓ -->
 		<slot />
+		<!-- end content -->
 	</body>
 </html>

@@ -7,4 +7,57 @@
 
 html, body {
   font-family: 'league-gothic-1', sans-serif !important;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* 1 league-gothic */
+@font-face {
+  font-family: "league-gothic-1", "league-gothic-2", "HelveticaNeue-CondensedBold", "Franklin Gothic Demi Cond", "Franklin Gothic Medium Cond", Impact, sans-serif !important;
+  src: url('../../FONTS/LeagueGothic-Regular.otf') format('otf');
+  font-style: normal;
+  font-weight: 400;
+}
+/* 2 GEORGIA-font */
+@font-face {
+  font-family: georgia, sans-serif !important;
+  src: url('../../FONTS/georgia-font/Georgia\ Regular\ font.ttf') format('otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+/** second font, second class **/
+.georgia {
+  font-family: georgia, sans-serif !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  font-weight: 400 !important;
+}
+
+/** fonts classes **/
+.font-condensed {
+  font-family: "league-gothic-1", "league-gothic-2", "HelveticaNeue-CondensedBold", "Franklin Gothic Demi Cond", "Franklin Gothic Medium Cond", Impact, sans-serif !important;
+  font-weight: 900;
+}
+
+.font-stretch {
+  font-stretch: extra-condensed;
+}
+
+/* styling the hero content */
+
+
+/* content */
+
+
+/* footer */
+.bottom-border {
+  border-bottom: 4px double #e6e6e6 !important;
+}
+
+::selection, ::where(*:is(:focus, :focus-visible, :focus-within))  {
+  border: 3px solid #e6e6e6 dashed !important;
 }

@@ -7,10 +7,13 @@ const { title } = Astro.props;
 ---
 
 <head>
+  <!-- SEO optimization -->
   <meta charset="UTF-8" />
-  <meta name="description" content="TrstKills official website!">
+  <meta name="description" content="TrstKills official website!" />
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
+  <link rel="stylesheet" href="../styles/icons/bootstrap-icon.css" />
+  <link rel="canonical" href="https://trstkills.netlify.app" />
 </head>
