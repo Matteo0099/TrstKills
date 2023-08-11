@@ -1,0 +1,9 @@
+{
+  "title": "trstkills",
+  "description": "A official website of trstkills",
+  "url": "http://trstkills.netlify.app",
+  "image": {
+    "src": "../../img/TrstKills.png",
+    "alt": "trstkill image"
+  }
+}
