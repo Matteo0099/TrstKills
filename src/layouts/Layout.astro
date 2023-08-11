@@ -1,0 +1,18 @@
+---
+// import some stuff
+import '../styles/main.css'
+import headed from '../components/Head.astro'
+
+interface Props {
+	title: string,
+	description: string
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<headed />
+	<body>
+		<slot />
+	</body>
+</html>
