@@ -1,0 +1,34 @@
+---
+//imports
+import Layout from "../layouts/Layout.astro";
+
+const {
+  title = "My Astro Blog",
+  description = "My musings about the Astro framework",
+  image,
+  frontmatter,
+  robots,
+} = Astro.props;
+---
+
+<Layout {title} {description} {image} {frontmatter} {robots}>
+  <div
+    class="container mx-auto max-w-[1000px] text-center w-full min-h-screen"
+  >
+    <h1 class="text-2xl sm:text-3xl md:text-4xl mt-16 sm:mt-24 md:mt-32">About our park!</h1>
+    <!-- image of google maps -->
+    <div class="container mx-auto my-8">
+      <!-- maps api -->
+      <div class="w-full h-full text-lg mb-10">
+        <iframe
+          class="mb-3 mt-1 shadow-lg max-w-full rounded-lg mx-auto h-[767px] w-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.4658815518856!2d13.78092007705718!3d45.641465171077364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477b6b08213e46bd%3A0x84da76bd69b52102!2sSkate%20park%20%22San%20Giacomo%22!5e0!3m2!1sit!2sit!4v1691838365308!5m2!1sit!2sit"
+          frameborder="0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </div>
+  </div>
+</Layout>

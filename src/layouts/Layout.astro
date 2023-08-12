@@ -3,6 +3,8 @@
 import '../styles/main.css'
 import '../styles/reset.css'
 import MainHead from '../components/Head.astro'
+import Footer from '../components/Footer.astro'
+import Navbar from '../components/Navbar.astro'
 
 interface Props {
 	title: string,
@@ -11,7 +13,6 @@ interface Props {
   frontmatter,
   robots,
 }
-
 
 const {
   title = "My Astro Blog",
@@ -27,8 +28,11 @@ const {
 	<!-- head of the docs (SEO)-->
 	<MainHead {title} {description} {image} {frontmatter} {robots} />
 	<body>
+		<!-- Navigation -->
+		<Navbar />
 		<!-- content ↓ -->
 		<slot />
 		<!-- end content -->
+		<Footer />
 	</body>
 </html>

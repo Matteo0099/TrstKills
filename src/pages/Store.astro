@@ -1,0 +1,18 @@
+---
+// imports
+// layout
+import Layout from '../layouts/Layout.astro';
+import Shop from '../components/Store.astro';
+
+const {
+  title = "My Astro Blog",
+  description = "My musings about the Astro framework",
+  image,
+  frontmatter,
+  robots,
+} = Astro.props;
+---
+
+<Layout {title} {description} {image} {frontmatter} {robots}>
+  <Shop />
+</Layout>

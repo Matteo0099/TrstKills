@@ -1,0 +1,25 @@
+---
+//imports
+import Layout from "../layouts/Layout.astro";
+
+const {
+  title = "My Astro Blog",
+  description = "My musings about the Astro framework",
+  image,
+  frontmatter,
+  robots,
+} = Astro.props;
+---
+
+<Layout {title} {description} {image} {frontmatter} {robots}>
+  <div class="container">
+    <div>
+    <!-- <a href="mailto:trstkillsbmx@gmail.com" target="_blank" role="link">
+          trstkillsbmx@gmail.com
+      </a> -->
+    </div>
+    <div>
+      
+    </div>
+  </div>
+</Layout>

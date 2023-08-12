@@ -1,0 +1,32 @@
+---
+// imports
+import Layout from "../layouts/Layout.astro";
+
+const {
+  title = "My Astro Blog",
+  description = "My musings about the Astro framework",
+  image,
+  frontmatter,
+  robots,
+} = Astro.props;
+---
+
+<Layout {title} {description} {image} {frontmatter} {robots}>
+  <div class="container max-w-[1000px] mx-auto my-4 min-h-screen">
+    <p class="georgia font-normal text-2xl sm:text-3xl md:text-4xl text-black my-8 first-letter:uppercase">
+      <span class="font-bold font-condensed mr-2 mb-2 text-3xl md:text-4xl">🇮🇹:</span> Trstkills nasce come un gruppo di amici che condividono la stessa
+      passione. trstkills è un brand emergente che riguarda il mondo dello
+      street art e della bmx, ci troviamo tutti i giorni preso lo skatepark di
+      sangiacomo a trieste, al momento la bmx viene considerata poco, speriamo
+      di poter organizzare qualche evento in futuro per far conoscere questo
+      sport
+    </p>
+    <p class="georgia font-normal text-2xl sm:text-3xl md:text-4xl text-black my-8 first-letter:uppercase">
+      <span class="font-bold font-condensed mr-2 mb-2 text-3xl md:text-4xl">🇬🇧:</span> Trstkills was born as a group of friends who share the same
+      passion. trstkills is an emerging brand that concerns the world of street
+      art and bmx, we meet every day at the sangiacomo skatepark in trieste, at
+      the moment bmx is not considered much, we hope to be able to organize some
+      event in the future to make this sport known
+    </p>
+  </div>
+</Layout>

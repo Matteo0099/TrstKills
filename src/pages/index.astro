@@ -1,20 +1,42 @@
 ---
+// imports
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
+import Shop from '../components/Store.astro';
+import Info from './About.astro';
+
+interface Props {
+	title: string,
+	description: string,
+	image,
+  frontmatter,
+  robots,
+}
+
+const {
+  title = "My Astro Blog",
+  description = "My musings about the Astro framework",
+  image,
+  frontmatter,
+  robots,
+} = Astro.props;
 ---
 
-<Layout title="TRSTKILLS" description='A trstkills official website'>
-	<main class="min-h-screen w-full max-w-[1000px] mx-auto">
-		<!-- the first content -->
-		<Navbar />
+<Layout title="TRSTKILLS" description='A trstkills official website' {image} {frontmatter} {robots}>
+	<!-- the first content -->
+	<main class="min-h-screen w-full max-w-[1000px] mx-auto">	
 		<!-- images grid 6x6 -->
+		<section class="section-normal store">
+			<Shop />
+		</section>
 
 		<!-- shop -->
-		<div class="grid">
-			<!-- x6 -->
-		</div>
+		<!-- <section class="section-normal">
+		</section> -->
+
+		<!-- <p>home</p> -->
 
 		<!-- contact -->
-		<!-- trstkillsbmx@gmail.com -->
+		<!-- <section class="section-normal">
+		</section> -->
 	</main>
 </Layout>
