@@ -435,6 +435,51 @@ h1 {
   /* max-width: 75%; */
 }
 
+.radio-btn {
+  appearance: none;
+  background-color: #fff;
+  margin: 0 .5rem 0 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+}
+
+.radio-btn:is(:focus, :focus-visible, :focus-within, :active) {
+  outline: 1px solid blue;
+}
+
+.radio-btn {
+  display: grid;
+  place-content: center;
+}
+
+.radio-btn.first::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #D6D6D6;
+}
+
+.radio-btn.sec::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #202321;
+}
+
+.radio-btn.first:checked::before, .radio-btn.sec:checked::before {
+  transform: scale(1);
+}
+
 /* Caption of Modal Image */
 #caption {
   margin: auto;

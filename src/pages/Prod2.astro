@@ -44,9 +44,21 @@ const {
         <div id="caption"></div>
       </div>
 
-      <div class="text-center mb-2 mt-10 flex flex-col gap-4">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">{Prod[1]?.title}</h2>
-        <div class="flex justify-center items-center">
+      <div class="text-left float-left mb-2 mt-10 flex flex-col gap-4">
+        <h2 class="text-2xl pl-2 sm:text-3xl md:text-4xl font-bold">{Prod[1]?.title}</h2>
+        
+        <section id="product_description" class="text-left m-2 text-xl">
+          <ul class="pl-6 list-disc">
+            <li>Color: Black</li>
+            <li>Model: Wearing L size 178cm/72kg</li>
+            <li>M size: L/73cm, W/55cm</li>
+            <li>L size: L/77cm, W/58cm</li>
+            <li>XL size: L/81cm, W/63cm</li>
+            <li>Fabric: 100% cotton</li>
+          </ul>
+        </section>
+
+        <div class="text-left flex items-center gap-2 pl-2">
           <p class="price">{Prod[1]?.price}</p>
           <span class="text-3xl">&euro;</span>
         </div>
