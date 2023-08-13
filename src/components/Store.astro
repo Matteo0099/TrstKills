@@ -1,6 +1,5 @@
 ---
 //imports
-// no layout for this
 import ph1 from "../../img/trstkills shop/antivento_front.jpg";
 import ph2 from "../../img/trstkills shop/black tee v1.jpg";
 import ph3 from "../../img/trstkills shop/black tee v2.jpg";
@@ -11,15 +10,25 @@ import ph7 from "../../img/trstkills shop/white tee v1.jpg";
 import ph8 from "../../img/trstkills shop/white tee v2.jpg";
 import ph9 from "../../img/trstkills shop/cuffia-white.png";
 import ph10 from "../../img/trstkills shop/cappellino-white.png";
+
+//js files
+import Prod1 from "../data/ProductData";
+import Prod2 from "../data/ProductData2";
+
+//PHOTOS
+const photos1 = [ph1, ph2, ph3, ph4, ph5];
+const photos2 = [ph6, ph7, ph8, ph9, ph10];
+
+interface Props {
+  photos1: string[];
+  photos2: string[];
+}
+
 import Contacts from "./Contacts.astro";
 ---
 
-<div
-  class="container mx-auto max-w-[1000px] xl:max-h-[750px] mt-8 sm:mt-16 md:mt-32 min-h-[85vh]"
->
-  <h1
-    class="georgia w-full text-2xl sm:text-4xl md:text-6xl text-center my-4 sm:my-8 md:10"
-  >
+<div class="container mx-auto max-w-[1000px] xl:max-h-[750px] mt-8 sm:mt-16 md:mt-32 min-h-[85vh]">
+  <h1 class="georgia w-full text-2xl sm:text-4xl md:text-6xl text-center my-4 sm:my-8 md:10">
     Featured Products
   </h1>
 
@@ -28,180 +37,60 @@ import Contacts from "./Contacts.astro";
 
     <!-- 1 row -->
     <div class="list">
-      <div class="product">
-        <img alt="shoes1" src={ph1} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">85<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">85<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
-              >incididunt</b>
-          </p>
+      {photos1.map((photo, index) => (
+        <div class="product">
+          <a href={Prod1[index]?.path} class="product">
+            <img alt="shoes1" src={photo} />
+            <div class="hidden-device">
+              <h2 class="text-2xl sm:text-3xl md:text-4xl">{Prod1[index]?.title}</h2>
+              <p class="price">
+                {Prod1[index]?.price}<span class="text-3xl">&euro;</span>
+              </p>
+            </div>
+            <div>
+              <h2 class="text-2xl sm:text-3xl md:text-4xl">{Prod1[index]?.title}</h2>
+              <div class="flex justify-center items-center">
+                <p class="price">{Prod1[index]?.price}</p>
+                <span class="text-3xl">&euro;</span>
+              </div>
+            </div>
+            <p class="descr">
+              {Prod1[index]?.description}
+            </p>
+          </a>
           <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
+          <a href="mailto:trstkillsbmx@gmail.com" target="_blank" role="link" class="btn-shop">Prenota (DM)</a>
         </div>
-      </div>
-      <div class="product">
-        <img alt="shoes2" src={ph2} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
-          </p>
-          <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
-        </div>
-      </div>
-      <div class="product">
-        <img alt="shoes3" src={ph3} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
-          </p>
-          <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
-        </div>
-      </div>
-      <div class="product">
-        <img alt="shoes4" src={ph4} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">20<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">20<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
-          </p>
-          <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
-        </div>
-      </div>
-      <div class="product">
-        <img alt="shoes1" src={ph5} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">20<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">20<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
-              >incididunt</b>
-          </p>
-          <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
-        </div>
-      </div>
+      ))}
     </div>
-
-    <!-- 2 row -->
+    
     <div class="list">
-      <div class="product">
-        <img alt="shoes1" src={ph6} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">35<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">35<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
-              >incididunt</b>
-          </p>
+      <!-- key={`prod2-${index}`} -->
+      {photos2.map((photo, index) => (
+        <div class="product"> 
+          <a href={Prod2[index]?.path} class="product"> 
+            <img alt="shoes1" src={photo} />
+            <div class="hidden-device">
+              <h2 class="text-2xl sm:text-3xl md:text-4xl">{Prod2[index]?.title}</h2>
+              <p class="price">
+                {Prod2[index]?.price}<span class="text-3xl">&euro;</span>
+              </p>
+            </div>
+            <div>
+              <h2 class="text-2xl sm:text-3xl md:text-4xl">{Prod2[index]?.title}</h2>
+              <div class="flex justify-center items-center">
+                <p class="price">{Prod2[index]?.price}</p>
+                <span class="text-3xl">&euro;</span>
+              </div>
+            </div>
+            <p class="descr">
+              {Prod2[index]?.description}
+            </p>
+          </a>
           <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
+          <a href="mailto:trstkillsbmx@gmail.com" target="_blank" role="link" class="btn-shop">Prenota (DM)</a>
         </div>
-      </div>
-      <div class="product">
-        <img alt="shoes1" src={ph7} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
-              >incididunt</b>
-          </p>
-          <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
-        </div>
-      </div>
-      <div class="product">
-        <img alt="shoes1" src={ph8} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
-              >incididunt</b>
-          </p>
-          <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
-        </div>
-      </div>
-      <div class="product">
-        <img alt="shoes1" src={ph9} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">27<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">27<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
-              >incididunt</b>
-          </p>
-          <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
-        </div>
-      </div>
-      <div class="product">
-        <img alt="shoes1" src={ph10} />
-        <div class="hidden-device">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">27<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-        </div>
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
-          <p class="price">27<sup>.00</sup><span class="text-3xl">&euro;</span></p>
-          <p class="descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
-              >incididunt</b>
-          </p>
-          <br />
-          <a href="#" class="btn-shop">Prenota (DM)</a>
-        </div>
-      </div>
+      ))}
     </div>
   </section>
 </div>
