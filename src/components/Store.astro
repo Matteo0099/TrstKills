@@ -1,110 +1,209 @@
 ---
 //imports
 // no layout for this
-import ph1 from '../../img/trstkills shop/antivento_front.jpg'
-import ph2 from '../../img/trstkills shop/black tee v1.jpg'
-import ph3 from '../../img/trstkills shop/black tee v2.jpg'
-import ph4 from '../../img/trstkills shop/canotta black.jpg'
-import ph5 from '../../img/trstkills shop/canotta white.jpg'
-import ph6 from '../../img/trstkills shop/hoodie black.jpg'
-import ph7 from '../../img/trstkills shop/white tee v1.jpg'
-import ph8 from '../../img/trstkills shop/white tee v2.jpg'
+import ph1 from "../../img/trstkills shop/antivento_front.jpg";
+import ph2 from "../../img/trstkills shop/black tee v1.jpg";
+import ph3 from "../../img/trstkills shop/black tee v2.jpg";
+import ph4 from "../../img/trstkills shop/canotta black.jpg";
+import ph5 from "../../img/trstkills shop/canotta white.jpg";
+import ph6 from "../../img/trstkills shop/hoodie black.jpg";
+import ph7 from "../../img/trstkills shop/white tee v1.jpg";
+import ph8 from "../../img/trstkills shop/white tee v2.jpg";
+import ph9 from "../../img/trstkills shop/cuffia-white.png";
+import ph10 from "../../img/trstkills shop/cappellino-white.png";
+import Contacts from "./Contacts.astro";
 ---
 
-<div class="container mx-auto max-w-[1000px] mt-8 sm:mt-16 md:mt-32 min-h-screen">
-  <div class="flex flex-col max-w-[1000px] flex-wrap">
-    <h1 class="georgia w-full text-2xl sm:text-4xl md:text-6xl text-center my-6 sm:my-8 md:10">Featured Products</h1>
-    <!-- x6 photos -->
-    <div class="flex flex-col md:flex-row justify-center items-center mx-2 mt-4 sm:mb-8">
-      <div>
-        <img
-          src={ph1}
-          alt="Image"
-          role="img"
-          width="300"
-          height="600"
-          class="aspect-video sm:aspect-auto max-w-[180px] min-h-[168px] sm:max-w-[125px]"
-        />
+<div
+  class="container mx-auto max-w-[1000px] xl:max-h-[750px] mt-8 sm:mt-16 md:mt-32 min-h-[85vh]"
+>
+  <h1
+    class="georgia w-full text-2xl sm:text-4xl md:text-6xl text-center my-4 sm:my-8 md:10"
+  >
+    Featured Products
+  </h1>
+
+  <section class="w-full max-w-[1000px] xl:max-h-[750px] min-h-full border-double border-b-4 pb-8 border-b-[#e6e6e6]">
+    <h1 class="mt-4 mb-8 font-thin text-xl">SHOP</h1>
+
+    <!-- 1 row -->
+    <div class="list">
+      <div class="product">
+        <img alt="shoes1" src={ph1} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">85<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">85<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
+              >incididunt</b>
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
       </div>
-      <div>
-        <img
-          src={ph2}
-          alt="Image"
-          role="img"
-          width="300"
-          height="600"
-          class="aspect-video"
-        />
+      <div class="product">
+        <img alt="shoes2" src={ph2} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
       </div>
-      <div>
-        <img
-          src={ph3}
-          alt="Image"
-          role="img"
-          width="300"
-          height="600"
-          class="aspect-video"
-        />
+      <div class="product">
+        <img alt="shoes3" src={ph3} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
       </div>
-      <div>
-        <img
-          src={ph4}
-          alt="Image"
-          role="img"
-          width="300"
-          height="600"
-          class="aspect-video"
-        />
+      <div class="product">
+        <img alt="shoes4" src={ph4} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">20<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">20<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
       </div>
-    </div>
-    <div class="flex flex-col md:flex-row justify-center items-center mx-2 sm:mt-8 border-double border-b-4 border-[#999] pb-16">
-      <div>
-        <img
-          src={ph5}
-          alt="Image"
-          role="img"
-          width="300"
-          height="600"
-          class="aspect-video"
-        />
-      </div>
-      <div>
-        <img
-          src={ph6}
-          alt="Image"
-          role="img"
-          width="300"
-          height="600"
-          class="aspect-video"
-        />
-      </div>
-      <div>
-        <img
-          src={ph7}
-          alt="Image"
-          role="img"
-          width="300"
-          height="600"
-          class="aspect-video"
-        />
-      </div>
-      <div>
-        <img
-          src={ph8}
-          alt="Image"
-          role="img"
-          width="300"
-          height="600"
-          class="aspect-video"
-        />
+      <div class="product">
+        <img alt="shoes1" src={ph5} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">20<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">20<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
+              >incididunt</b>
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
       </div>
     </div>
 
-    <div class="container flex justify-center mt-12 min-h-[250px] items-center mx-auto max-w-[1000px] text-center font-condensed flex-col">
-      <h1 class="text-2xl sm:text-4xl md:text-6xl text-center mb-6">For buy contact us below!</h1>
-      <a href="mailto:" target="_blank" role="link" class="text-blue-500 text-2xl sm:text-4xl md:text-6xl text-center">
-        @trstkillsbmx@gmail.com
-      </a>
+    <!-- 2 row -->
+    <div class="list">
+      <div class="product">
+        <img alt="shoes1" src={ph6} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">35<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">35<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
+              >incididunt</b>
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
+      </div>
+      <div class="product">
+        <img alt="shoes1" src={ph7} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
+              >incididunt</b>
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
+      </div>
+      <div class="product">
+        <img alt="shoes1" src={ph8} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">15<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
+              >incididunt</b>
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
+      </div>
+      <div class="product">
+        <img alt="shoes1" src={ph9} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">27<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">27<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
+              >incididunt</b>
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
+      </div>
+      <div class="product">
+        <img alt="shoes1" src={ph10} />
+        <div class="hidden-device">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">27<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl">SOME SHOES</h2>
+          <p class="price">27<sup>.00</sup><span class="text-3xl">&euro;</span></p>
+          <p class="descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit<b
+              >incididunt</b>
+          </p>
+          <br />
+          <a href="#" class="btn-shop">Prenota (DM)</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </div>
+
+<Contacts />

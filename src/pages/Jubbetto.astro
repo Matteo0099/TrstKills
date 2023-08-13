@@ -1,0 +1,24 @@
+---
+// imports 
+
+import LayoutProduct from "../layouts/LayoutProduct.astro";
+interface Props {
+	title: string,
+	description: string,
+	image,
+  frontmatter,
+  robots,
+}
+
+const {
+  title = "My Astro Blog",
+  description = "My musings about the Astro framework",
+  image,
+  frontmatter,
+  robots,
+} = Astro.props;
+---
+
+<LayoutProduct {title} {description} {image} {frontmatter} {robots}>
+  
+</LayoutProduct>

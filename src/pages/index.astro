@@ -2,7 +2,7 @@
 // imports
 import Layout from '../layouts/Layout.astro';
 import Shop from '../components/Store.astro';
-import Info from './About.astro';
+import Cards from '../components/Cards.astro';
 
 interface Props {
 	title: string,
@@ -29,14 +29,8 @@ const {
 			<Shop />
 		</section>
 
-		<!-- shop -->
-		<!-- <section class="section-normal">
-		</section> -->
-
-		<!-- <p>home</p> -->
-
-		<!-- contact -->
-		<!-- <section class="section-normal">
-		</section> -->
+		<section class="section-cards py-0">
+			<Cards />
+		</section>
 	</main>
 </Layout>
