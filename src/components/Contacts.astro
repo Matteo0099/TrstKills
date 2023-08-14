@@ -2,15 +2,116 @@
 //imports
 ---
 
-<div class="container flex justify-center mt-12 min-h-[250px] items-center mx-auto max-w-[1000px] text-center font-condensed flex-col">
-  <h1 class="text-2xl sm:text-4xl md:text-6xl text-center mb-6">
+<div
+  class="container flex justify-center mt-16 min-h-[250px] items-center mx-auto max-w-[1000px] text-center font-condensed flex-col"
+>
+  <h1 class="text-3xl sm:text-4xl md:text-6xl text-center mb-6">
     For buy contact us below!
   </h1>
-  <a
+
+  <form
+    action="https://postmail.invotes.com/send"
+    method="post"
+    id="email_form"
+    class="flex flex-col font-sans text-xl md:text-2xl 
+          justify-between min-h-[300px] w-full max-w-[32rem] 
+          items-center md:min-h-[350px] md:max-w-[450px] my-12"
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      required
+      class="w-full border-2 border-gray-300 min-h-[40px] rounded-md py-2 px-3"
+    />
+
+    <textarea
+      name="text"
+      placeholder="Message"
+      required
+      class="w-full border-2 border-gray-300 min-h-[85px] overflow-y-hidden max-h-[120px] rounded-md py-4 px-3"
+    >
+      1) Indirizzo Spedizione (via + n* civico):
+      2) Cap: 
+      3) Città:
+    </textarea>
+
+    <!-- Default message -->
+    <select
+      name="product"
+      id="product"
+      required
+      aria-placeholder="none"
+      class="border-2 border-gray-300 w-full min-h-[40px] rounded-md py-2 px-3"
+    >
+      <option value="antivento">Antivento</option>
+      <option value="black_tee_v1">Black Tee V1</option>
+      <option value="white_tee_v1">White Tee V1</option>
+      <option value="black_tee_v2">Black Tee V2</option>
+      <option value="white_tee_v2">White Tee V2</option>
+      <option value="black_hoodie">Black Hoodie</option>
+      <option value="white_hoodie">White Hoodie</option>
+      <option value="white_cappellino">White Cappellino</option>
+      <option value="white_berretto">White Berretto</option>
+      <option value="black_berretto">Black Berretto</option>
+    </select>
+
+    <!-- dont touch this -->
+    <input type="hidden" name="access_token" value="vbq9cm5xi8qbxuhx731l2o2c" />
+    <!-- return urls can be fully qualified -OR- 
+    start with / for root relative -OR-
+    start with . for url relative -->
+    <input
+      type="hidden"
+      name="success_url"
+      value=".?message=Email+Successfully+Sent%21&isError=0"
+    />
+    <input
+      type="hidden"
+      name="error_url"
+      value=".?message=Email+could+not+be+sent.&isError=1"
+    />
+
+    <!-- set the reply-to address -->
+    <input
+      type="text"
+      name="reply_to"
+      required
+      placeholder="Your Email*"
+      class="w-full border-2 border-gray-300 min-h-[40px] rounded-md py-2 px-3"
+    />
+
+    <!-- to append extra fields, use the extra_ prefix.
+        Entries will be appended to your message body. -->
+    <input
+      type="text"
+      name="extra_phone_number"
+      placeholder="Phone Number"
+      required
+      class="w-full border-2 border-gray-300 min-h-[40px] rounded-md py-2 px-3"
+    />
+
+    <!-- to split your message into 160 chars for an sms gateway -->
+    <input type="hidden" name="sms_format" value="true" />
+
+    <input
+      id="submit_form"
+      type="submit"
+      value="Send"
+      disabled
+      class="px-4 py-2 text-white bg-blue-500 min-h-[40px] disabled:bg-slate-400 w-[32rem] md:w-full rounded-md"
+    />
+  </form>
+
+  <!-- <a
     href="mailto:trstkillsbmx@gmail.com"
     target="_blank"
     role="link"
     class="text-[#0A4BB8] text-2xl sm:text-4xl md:text-6xl text-center">
     @trstkillsbmx@gmail.com
-  </a>
+  </a> -->
 </div>
+
+<script>
+  import "../data/Form.js";
+</script>
