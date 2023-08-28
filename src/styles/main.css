@@ -55,6 +55,7 @@ html, body {
   font-style: normal !important;
   font-stretch: normal !important;
   font-weight: 400 !important;
+  letter-spacing: normal;
 }
 
 /** fonts classes **/
