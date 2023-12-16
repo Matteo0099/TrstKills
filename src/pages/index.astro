@@ -1,7 +1,7 @@
 ---
 // imports
 import Layout from '../layouts/Layout.astro';
-import Shop from '../components/Store.astro';
+import Shops from '../components/Store.astro';
 import Cards from '../components/Cards.astro';
 
 interface Props {
@@ -26,10 +26,10 @@ const {
 	<main class="min-h-screen w-full max-w-[1000px] mx-auto">	
 		<!-- images grid 6x6 -->
 		<section class="section-normal store">
-			<Shop />
+			<Shops />
 		</section>
 
-		<section class="section-cards py-0">
+		<section class="section-cards pt-0 pb-12">
 			<Cards />
 		</section>
 	</main>
