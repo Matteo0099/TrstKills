@@ -143,7 +143,7 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
 
-  margin: 8rem auto 0;
+  margin: 4rem auto 0;
   max-width: 1000px;
   text-wrap: balance;
 }
