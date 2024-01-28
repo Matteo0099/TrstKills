@@ -1,14 +1,25 @@
 ---
-// imports images
-import image1 from '../../img/Immagine_Di_prova.jpg'
-import imageLogo from '../../img/TrstKills.png'
+// imports images (scroller)
+import image1 from "../../img/Immagine_Di_prova.jpg";
+import image2 from "../../img/foto_hero_scroller/DSC_0717.jpg";
+import image3 from "../../img/foto_hero_scroller/DSC_0722.jpg";
+import image4 from "../../img/foto_hero_scroller/DSC_0855.jpg";
+import image5 from "../../img/foto_hero_scroller/DSC_0925.jpg";
+import image6 from "../../img/foto_hero_scroller/DSC_1016.jpg";
+import image7 from "../../img/foto_hero_scroller/DSC_1043.jpg";
+// logo
+import imageLogo from "../../img/TrstKills.png";
 ---
 
-<div class="hero-content mx-auto container max-w-[1000px] min-h-[430px] sm:min-h-[505px] my-0">
+<div
+  class="hero-content mx-auto container max-w-[1000px] min-h-[430px] sm:min-h-[505px] my-0"
+>
   <!-- top -->
-  <div class="container h-1/2 mt-0 mx-0 sm:mx-auto flex justify-between items-center">
+  <div
+    class="container h-1/2 mt-0 mx-0 sm:mx-auto flex justify-between items-center"
+  >
     <div class="mr-auto">
-      <a href="https://trstkills.netlify.app">
+      <a href="https://trstkills.netlify.app" target="_self">
         <img
           src={imageLogo}
           alt="Image"
@@ -49,22 +60,74 @@ import imageLogo from '../../img/TrstKills.png'
   <!-- middle -->
   <div class="container-scroller">
     <div class="object-cover bg-cover h-full w-full overflow-hidden">
-      <img src="../../img/foto_hero_scroller/DSC_0717.JPG" alt="Image" role="img" width="300" height="400" class="object-cover bg-cover h-full w-full overflow-hidden">
+      <img
+        src={image1}
+        alt="Image"
+        role="img"
+        width="300"
+        height="400"
+        class="object-cover bg-cover h-full w-full overflow-hidden"
+      />
     </div>
     <div class="object-cover bg-cover h-full w-full overflow-hidden">
-      <img src="../../img/foto_hero_scroller/DSC_0722.JPG" alt="Image" role="img" width="300" height="400" class="object-cover bg-cover h-full w-full overflow-hidden">
+      <img
+        src={image2}
+        alt="Image"
+        role="img"
+        width="300"
+        height="400"
+        class="object-cover bg-cover h-full w-full overflow-hidden"
+      />
     </div>
     <div class="object-cover bg-cover h-full w-full overflow-hidden">
-      <img src="../../img/foto_hero_scroller/DSC_0855.JPG" alt="Image" role="img" width="300" height="400" class="object-cover bg-cover h-full w-full overflow-hidden">
+      <img
+        src={image3}
+        alt="Image"
+        role="img"
+        width="300"
+        height="400"
+        class="object-cover bg-cover h-full w-full overflow-hidden"
+      />
     </div>
     <div class="object-cover bg-cover h-full w-full overflow-hidden">
-      <img src="../../img/foto_hero_scroller/DSC_0925.JPG" alt="Image" role="img" width="300" height="400" class="object-cover bg-cover h-full w-full overflow-hidden">
+      <img
+        src={image4}
+        alt="Image"
+        role="img"
+        width="300"
+        height="400"
+        class="object-cover bg-cover h-full w-full overflow-hidden"
+      />
     </div>
     <div class="object-cover bg-cover h-full w-full overflow-hidden">
-      <img src="../../img/foto_hero_scroller/DSC_1016.JPG" alt="Image" role="img" width="300" height="400" class="object-cover bg-cover h-full w-full overflow-hidden">
+      <img
+        src={image5}
+        alt="Image"
+        role="img"
+        width="300"
+        height="400"
+        class="object-cover bg-cover h-full w-full overflow-hidden"
+      />
     </div>
     <div class="object-cover bg-cover h-full w-full overflow-hidden">
-      <img src="../../img/foto_hero_scroller/DSC_1043.JPG" alt="Image" role="img" width="300" height="400" class="object-cover bg-cover h-full w-full overflow-hidden">
+      <img
+        src={image6}
+        alt="Image"
+        role="img"
+        width="300"
+        height="400"
+        class="object-cover bg-cover h-full w-full overflow-hidden"
+      />
+    </div>
+    <div class="object-cover bg-cover h-full w-full overflow-hidden">
+      <img
+        src={image7}
+        alt="Image"
+        role="img"
+        width="300"
+        height="400"
+        class="object-cover bg-cover h-full w-full overflow-hidden"
+      />
     </div>
   </div>
 
@@ -77,27 +140,21 @@ import imageLogo from '../../img/TrstKills.png'
         class="flex justify-around w-full items-center max-w-[1000px] mt-4 mx-auto flex-wrap"
       >
         <li class="font-condensed">
-          <a
-            href="/"
-            class="text-[24px] sm:text-[36px] md:text-[48px]">HOME</a
+          <a href="/" class="text-[24px] sm:text-[36px] md:text-[48px]">HOME</a>
+        </li>
+        <li class="font-condensed">
+          <a href="/Crew" class="text-[24px] sm:text-[36px] md:text-[48px]"
+            >CREW</a
           >
         </li>
         <li class="font-condensed">
-          <a
-            href="/Crew"
-            class="text-[24px] sm:text-[36px] md:text-[48px]">CREW</a
+          <a href="/About" class="text-[24px] sm:text-[36px] md:text-[48px]"
+            >ABOUT</a
           >
         </li>
         <li class="font-condensed">
-          <a
-            href="/About"
-            class="text-[24px] sm:text-[36px] md:text-[48px]">ABOUT</a
-          >
-        </li>
-        <li class="font-condensed">
-          <a
-            href="/Store"
-            class="text-[24px] sm:text-[36px] md:text-[48px]">STORE</a
+          <a href="/Store" class="text-[24px] sm:text-[36px] md:text-[48px]"
+            >STORE</a
           >
         </li>
       </ul>
