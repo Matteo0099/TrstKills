@@ -91,6 +91,48 @@ html, body {
   }
 }
 
+/** navbar scroller infinite **/
+.container-scroller {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 500px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.container-scroller div {
+  height: 400px;
+  min-width: 300px;
+  margin-left: 100px;
+  -webkit-animation: slide 30s linear infinite;
+          animation: slide 30s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-1500px, 0, 0);
+            transform: translate3d(-1500px, 0, 0); /* The image width */
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-1500px, 0, 0);
+            transform: translate3d(-1500px, 0, 0); /* The image width */
+  }
+}
+
+
 /* content */
 /***********/
 /** store **/
