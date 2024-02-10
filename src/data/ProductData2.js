@@ -6,13 +6,13 @@ const prod2 = [
     path: "/Prod6"
   },
   {
-    title: "Tee v1",
+    title: "White Tee v1",
     price: 15,
     description: "T-shirt v1",
     path: "/Prod7"
   },
   {
-    title: "Tee v2",
+    title: "White Tee v2",
     price: 15,
     description: "T-shirt v2",
     path: "/Prod8"
@@ -24,9 +24,9 @@ const prod2 = [
     path: "/Prod9"
   },
   {
-    title: "Cappellino",
-    price: 27,
-    description: "Cappellino",
+    title: "Felpa new",
+    price: 35, 
+    description: "Felpa",
     path: "/Prod10"
   }
 ];
