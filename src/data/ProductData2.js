@@ -24,9 +24,9 @@ const prod2 = [
     path: "/Prod9"
   },
   {
-    title: "Felpa new",
+    title: "Hoodie new",
     price: 35, 
-    description: "Felpa",
+    description: "Hoodie new",
     path: "/Prod10"
   }
 ];
