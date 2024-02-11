@@ -104,10 +104,10 @@ html, body {
 
 .container-scroller div {
   height: 400px;
-  min-width: 300px;
+  min-width: 230px;
   margin-left: 100px;
-  -webkit-animation: slide 30s linear infinite;
-          animation: slide 30s linear infinite;
+  -webkit-animation: slide 35s linear infinite;
+          animation: slide 35s linear infinite;
 }
 
 @-webkit-keyframes slide {
@@ -116,8 +116,8 @@ html, body {
             transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-1500px, 0, 0);
-            transform: translate3d(-1500px, 0, 0); /* The image width */
+    -webkit-transform: translate3d(-1750px, 0, 0);
+            transform: translate3d(-1750px, 0, 0); /* The image width */
   }
 }
 
@@ -127,8 +127,8 @@ html, body {
             transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-1500px, 0, 0);
-            transform: translate3d(-1500px, 0, 0); /* The image width */
+    -webkit-transform: translate3d(-1750px, 0, 0);
+            transform: translate3d(-1750px, 0, 0); /* The image width */
   }
 }
 
@@ -545,8 +545,8 @@ h1 {
 .modal-content {
   margin: auto;
   display: block;
-  width: calc(100vw - 55%);
-  /* max-width: 75%; */
+  width: max-content;
+  max-width: 1024px;
 }
 
 .radio-btn {
