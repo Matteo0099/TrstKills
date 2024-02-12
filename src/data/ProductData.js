@@ -12,12 +12,6 @@ const prod1 = [
     path: "/Prod2",
   },
   {
-    title: "T-shirt new 3",
-    price: 15, 
-    description: "T-shirt (new)",
-    path: "/Prod3",
-  },
-  {
     title: "T-shirt Black tee v1",
     price: 15,
     description: "T-shirt",
